@@ -33,7 +33,7 @@ def save_data(cat_or_dog, train_num, test_num):
 
 
 def load_data(cat_or_dog):
-    data = np.load('E:\\GOD\Documents\\VsCode\\PyNoteBook\\Keras\\{}.npz'.format(cat_or_dog))
+    data = np.load('数据集上级目录\\{}.npz'.format(cat_or_dog))
     x_train = data['x_train']
     y_train = data['y_train']
     x_test = data['x_test']
