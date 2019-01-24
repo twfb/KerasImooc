@@ -49,4 +49,10 @@ def load_data():
     y_train = np.append(y_train_cat, y_train_dog, axis=0)
     x_test = np.append(x_test_cat, x_test_dog, axis=0)
     y_test = np.append(y_test_cat, y_test_dog, axis=0)
+    permutation_train = np.random.permutation(y_train.shape[0])
+    permutation_test = np.random.permutation(y_test.shape[0])
+    x_train = x_train[permutation_train, :, :]
+    y_train = y_train[permutation_train]
+    x_test = x_train[permutation_test, :, :]
+    y_test = y_train[permutation_test]
     return (x_train, y_train), (x_test, y_test)
