@@ -1,7 +1,7 @@
 from skimage.transform import resize
 import matplotlib.pyplot as plt
 import numpy as np
-path = 'E:\\GOD\Documents\\VsCode\\PyNoteBook\\Keras\\'
+path = './'
 
 
 def get_train_data(cat_or_dog, start, end):
@@ -9,7 +9,7 @@ def get_train_data(cat_or_dog, start, end):
     y = np.zeros([1, 1])
     
     for i in range(start, end + 1):
-        image = '{}images\\train\\{}.{}.jpg'.format(path, cat_or_dog, i)
+        image = '{}images/train/{}.{}.jpg'.format(path, cat_or_dog, i)
         label = [1]
         if cat_or_dog == 'dog':
             label = [0]
